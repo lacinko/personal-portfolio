@@ -1,0 +1,51 @@
+.skills {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    background: hsl(250, 37%, 16%);
+    width: 40vw;
+    color: white;
+    padding: 2rem;
+    border-radius: 999px;
+    padding-left: 5rem;
+  }
+}
+
+.skills__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skillcard {
+  height: 20vh;
+  width: 15vw;
+  border: hsl(250, 37%, 16%) 5px solid;
+  padding: 1.8rem 1rem;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 999px;
+  background: white;
+  opacity: 0.7;
+  img {
+    margin-top: 0.5rem;
+    height: 100%;
+  }
+}
+
+.skillcard:hover {
+  opacity: 1;
+  border: rgb(1, 109, 130) 5px solid;
+}
+
+.skills__background {
+  position: absolute;
+  z-index: -2;
+  height: 60%;
+  top: 53rem;
+  left: 10rem;
+}

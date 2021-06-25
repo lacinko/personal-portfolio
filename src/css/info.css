@@ -1,0 +1,134 @@
+.section__img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 40vh;
+  width: 50vw;
+  background: #016d82;
+  background: -webkit-gradient(linear, left top, left bottom, from(#016d82), color-stop(50%, #01a9bc), to(#02cdd8));
+  background: linear-gradient(180deg, #016d82 0%, #01a9bc 50%, #02cdd8 100%);
+}
+
+.section__img-about-me {
+  height: 40vh;
+  opacity: 0.6;
+  border-bottom-right-radius: 20%;
+  background: #027a8d;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__heading strong {
+  color: white;
+}
+
+.section__container {
+  height: 40vh;
+  width: 50vw;
+  background: #016d82;
+  background: -webkit-gradient(linear, left top, left bottom, from(#016d82), color-stop(50%, #01a9bc), to(#02cdd8));
+  background: linear-gradient(180deg, #016d82 0%, #01a9bc 50%, #02cdd8 100%);
+}
+
+.section__triangle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+  width: 49.5vw;
+  height: 40vh;
+  background: #1f1a38;
+  border-bottom-left-radius: 70%;
+}
+
+.section__triangle img {
+  height: 80%;
+  border-radius: 999px;
+  opacity: 0.4;
+  -webkit-animation: glowing 5s linear 2s infinite alternate;
+          animation: glowing 5s linear 2s infinite alternate;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    opacity: 0.6;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+    opacity: 0.8;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+    opacity: 1;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    opacity: 0.2;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    opacity: 0.6;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+    opacity: 0.8;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+    opacity: 1;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    opacity: 0.2;
+  }
+}
+/*# sourceMappingURL=info.css.map */

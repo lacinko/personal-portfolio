@@ -1,0 +1,93 @@
+.section__img-container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 40vh;
+  width: 50vw;
+  background: rgb(1, 109, 130);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 109, 130, 1) 0%,
+    rgba(1, 169, 188, 1) 50%,
+    rgba(2, 205, 216, 1) 100%
+  );
+}
+
+.section__img-about-me {
+  height: 40vh;
+  opacity: 0.6;
+  border-bottom-right-radius: 20%;
+  background: #027a8d;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__heading {
+  strong {
+    color: white;
+  }
+}
+
+.section__container {
+  height: 40vh;
+  width: 50vw;
+  background: rgb(1, 109, 130);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 109, 130, 1) 0%,
+    rgba(1, 169, 188, 1) 50%,
+    rgba(2, 205, 216, 1) 100%
+  );
+}
+
+.section__triangle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  width: 49.5vw;
+  height: 40vh;
+  background: hsl(250, 37%, 16%);
+  border-bottom-left-radius: 70%;
+  img {
+    height: 80%;
+    border-radius: 999px;
+    opacity: 0.4;
+    animation: glowing 5s linear 2s infinite alternate;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    opacity: 0.6;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+    opacity: 0.8;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+    opacity: 1;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+    opacity: 0.2;
+  }
+}
