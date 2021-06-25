@@ -1,5 +1,5 @@
 .skills {
-  margin-top: 3rem;
+  margin-top: 16vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,6 +13,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .skills h4 {
@@ -61,7 +62,7 @@
   position: absolute;
   z-index: -2;
   height: 60%;
-  top: 53rem;
+  bottom: 0;
   left: 10rem;
 }
 /*# sourceMappingURL=skills.css.map */

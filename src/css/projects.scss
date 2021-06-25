@@ -51,5 +51,34 @@
 }
 
 .projects__name {
-  padding-bottom: 4rem;
+  font-size: 1.6rem;
+  color: white;
+  background: rgb(1, 109, 130);
+  background: linear-gradient(
+    180deg,
+    rgba(1, 109, 130, 1) 0%,
+    rgba(1, 169, 188, 1) 50%,
+    rgba(2, 205, 216, 1) 100%
+  );
+  border-radius: 999px;
+  padding-left: 5vw;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.projects__link-github {
+  text-decoration: none;
+  p {
+    padding-left: 5vw;
+    font-size: 1rem;
+    padding-top: 1rem;
+    color: white;
+    background: rgb(1, 109, 130);
+    background: linear-gradient(
+      180deg,
+      rgba(1, 109, 130, 1) 0%,
+      rgba(1, 169, 188, 1) 50%,
+      rgba(2, 205, 216, 1) 100%
+    );
+  }
 }

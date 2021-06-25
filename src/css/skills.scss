@@ -1,9 +1,10 @@
 .skills {
-  margin-top: 3rem;
+  margin-top: 16vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   h4 {
     background: hsl(250, 37%, 16%);
@@ -46,6 +47,6 @@
   position: absolute;
   z-index: -2;
   height: 60%;
-  top: 53rem;
+  bottom: 0;
   left: 10rem;
 }
