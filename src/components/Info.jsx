@@ -1,4 +1,5 @@
 import React from "react";
+import hand from "../images/hand.jpg";
 import "../css/info.css";
 
 export const Info = () => {
@@ -8,7 +9,7 @@ export const Info = () => {
         <h2 className="section__heading">
           Hello, <strong>nice</strong> to<strong> meet </strong>you.
         </h2>
-        <img class="section__img-about-me" src="./hand.jpg" alt="profile-pic" />
+        <img class="section__img-about-me" src={hand} alt="profile-pic" />
       </span>
       <div className="section__container">
         <div className="section__triangle">

@@ -1,16 +1,18 @@
 import React from "react";
+import profilePic from "../images/profile-picture.png";
 import "../css/aboutme.css";
 import PersonIcon from "@material-ui/icons/Person";
 import HomeIcon from "@material-ui/icons/Home";
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
 import EmailIcon from "@material-ui/icons/Email";
+import CV from "../download/Topolsky_Ladislav_CV.pdf";
 
 export const AboutMe = () => {
   return (
     <section className="section about-me" id="about-me">
       <h4>About Me</h4>
       <div className="about-me__container">
-        <img src="./profile-picture.png" alt="" srcset="" />
+        <img src={profilePic} alt="" srcset="" />
         <div className="about-me__background"></div>
         <ul class="section__list">
           <li className="section__list-item">
@@ -32,6 +34,11 @@ export const AboutMe = () => {
           <li className="section__list-item">
             <EmailIcon />
             ladislav.topolsky@gmail.com
+          </li>
+          <li className="section__list-item">
+            <a href={CV} download="Topolsky_Ladislav_CV.pdf">
+              Download CV
+            </a>
           </li>
         </ul>
         <div className="about-me__text-container">

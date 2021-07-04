@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import calendarApp from "../images/calendar-app.png";
+import weatherApp from "../images/weather-app.png";
 import "../css/projects.css";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
@@ -9,42 +11,53 @@ export const Projects = () => {
       name: "Calendar App",
       linkPage: "https://lacinko.github.io/CalendarApp/",
       linkGithub: "https://github.com/lacinko/CalendarApp",
-      img: "./calendar-app.png",
+      img: calendarApp,
     },
     {
       name: "Weather App",
       linkPage: "https://lacinko.github.io/weather-app/",
       linkGithub: "https://lacinko.github.io/weather-app",
-      img: "./weather-app.png",
+      img: weatherApp,
+    },
+    {
+      name: "Chat App",
+      linkPage: "https://lacinko.github.io/chat-app",
+      linkGithub: "https://lacinko.github.io/chat-app",
+      img: "chat",
     },
   ];
-  let projectNumber = 0;
-  const [activeProject, setActiveProject] = useState(projects[projectNumber]);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
 
   function handleChange(direction) {
     if (direction === "back") {
-      if (projectNumber === 0) {
-        setActiveProject(projects[projectNumber]);
+      if (activeProjectIndex === 0) {
+        setActiveProjectIndex(0);
         return;
       }
-      projectNumber--;
-      setActiveProject(projects[projectNumber]);
-      console.log(projectNumber);
+      setActiveProjectIndex((prevState) => prevState - 1);
     }
     if (direction === "forward") {
-      if (projectNumber === projects.length) {
-        setActiveProject(projects[projectNumber]);
+      if (activeProjectIndex === projects.length - 1) {
+        setActiveProjectIndex(projects.length - 1);
         return;
       }
-      projectNumber++;
-      setActiveProject(projects[projectNumber]);
-      console.log(projectNumber);
+
+      setActiveProjectIndex((prevState) => prevState + 1);
     }
   }
+
+  useEffect(() => {
+    const next = (activeProjectIndex + 1) % projects.length;
+    const id = setTimeout(() => setActiveProjectIndex(next), 3000);
+    return () => clearTimeout(id);
+  }, [activeProjectIndex]);
+
   return (
     <div className="section projects">
       <h4 className="projects__heading">Projects</h4>
       <div className="projects__container">
+        <div className="projects__background"></div>
+        <div className="projects__background-bottom"></div>
         <button
           onClick={() => handleChange("back")}
           className="projects__left-arrow"
@@ -52,31 +65,30 @@ export const Projects = () => {
           <ArrowBackIosIcon fontSize="large" />
         </button>
         <span>
-          <img
-            src="./browser-window.png"
-            alt=""
-            srcset=""
-            className="projects__browser-overlay"
-          />
-          <h5 className="projects__name">{activeProject.name}</h5>
+          <h5 className="projects__name">
+            {projects[activeProjectIndex].name}
+            <a
+              href={projects[activeProjectIndex].linkGithub}
+              className="projects__link-github"
+              target="_blank"
+            >
+              <p>
+                Link <strong>to</strong> Github
+              </p>
+            </a>
+          </h5>
+
           <a
-            href={activeProject.linkPage}
+            href={projects[activeProjectIndex].linkPage}
             className="projects__link-page"
             target="_blank"
           >
             <img
-              src={activeProject.img}
+              src={projects[activeProjectIndex].img}
               alt=""
               srcset=""
               className="projects__project-img"
             />
-          </a>
-          <a
-            href={activeProject.linkGithub}
-            className="projects__link-github"
-            target="_blank"
-          >
-            <p>Link to Github.</p>
           </a>
         </span>
         <button

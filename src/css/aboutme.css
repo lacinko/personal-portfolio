@@ -21,6 +21,10 @@
   padding-left: 5rem;
 }
 
+.about-me img {
+  background: white;
+}
+
 .about-me__container {
   display: -webkit-box;
   display: -ms-flexbox;

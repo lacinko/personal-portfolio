@@ -1,5 +1,7 @@
 import React from "react";
 import { Card } from "./Card";
+import checkbox from "../images/checkbox.svg";
+import expressJs from "../images/expressjs.png";
 import "../css/skills.css";
 
 export const Skills = () => {
@@ -59,12 +61,17 @@ export const Skills = () => {
       name: "FIGMA",
       src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
     },
+    {
+      id: 12,
+      name: "EXPRESSJS",
+      src: expressJs,
+    },
   ];
 
   return (
     <div className="section skills" id="skills">
       <h4>Skills</h4>
-      <img src="./checkbox.svg" alt="" className="skills__background" />
+      <img src={checkbox} alt="" className="skills__background" />
       <div className="skills__container">
         {skillsArray.map((skill) => (
           <Card
