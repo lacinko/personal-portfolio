@@ -75,7 +75,7 @@ export const Skills = () => {
       <div className="skills__container">
         {skillsArray.map((skill) => (
           <Card
-            id={skill.id}
+            key={skill.id}
             name={skill.name}
             src={skill.src}
             classN="skillcard"

@@ -19,12 +19,6 @@ export const Projects = () => {
       linkGithub: "https://lacinko.github.io/weather-app",
       img: weatherApp,
     },
-    {
-      name: "Chat App",
-      linkPage: "https://lacinko.github.io/chat-app",
-      linkGithub: "https://lacinko.github.io/chat-app",
-      img: "chat",
-    },
   ];
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
 
@@ -50,10 +44,11 @@ export const Projects = () => {
     const next = (activeProjectIndex + 1) % projects.length;
     const id = setTimeout(() => setActiveProjectIndex(next), 3000);
     return () => clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeProjectIndex]);
 
   return (
-    <div className="section projects">
+    <div className="section projects" id="projects">
       <h4 className="projects__heading">Projects</h4>
       <div className="projects__container">
         <div className="projects__background"></div>
@@ -70,6 +65,7 @@ export const Projects = () => {
             <a
               href={projects[activeProjectIndex].linkGithub}
               className="projects__link-github"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <p>
@@ -81,12 +77,13 @@ export const Projects = () => {
           <a
             href={projects[activeProjectIndex].linkPage}
             className="projects__link-page"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <img
               src={projects[activeProjectIndex].img}
               alt=""
-              srcset=""
+              srcSet=""
               className="projects__project-img"
             />
           </a>

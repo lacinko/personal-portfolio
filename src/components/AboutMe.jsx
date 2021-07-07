@@ -5,6 +5,7 @@ import PersonIcon from "@material-ui/icons/Person";
 import HomeIcon from "@material-ui/icons/Home";
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
 import EmailIcon from "@material-ui/icons/Email";
+import CloudDownloadIcon from "@material-ui/icons/CloudDownload";
 import CV from "../download/Topolsky_Ladislav_CV.pdf";
 
 export const AboutMe = () => {
@@ -12,12 +13,12 @@ export const AboutMe = () => {
     <section className="section about-me" id="about-me">
       <h4>About Me</h4>
       <div className="about-me__container">
-        <img src={profilePic} alt="" srcset="" />
+        <img src={profilePic} alt="" srcSet="" />
         <div className="about-me__background"></div>
-        <ul class="section__list">
+        <ul className="section__list">
           <li className="section__list-item">
             <PersonIcon />
-            20 October 1992
+            28 Years old
           </li>
           <li className="section__list-item">
             <HomeIcon />
@@ -36,8 +37,12 @@ export const AboutMe = () => {
             ladislav.topolsky@gmail.com
           </li>
           <li className="section__list-item">
-            <a href={CV} download="Topolsky_Ladislav_CV.pdf">
-              Download CV
+            <a
+              href={CV}
+              download="Topolsky_Ladislav_CV.pdf"
+              className="section__download-link"
+            >
+              <CloudDownloadIcon /> Download CV
             </a>
           </li>
         </ul>

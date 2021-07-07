@@ -2,13 +2,72 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #1f1a38;
-  height: 30vh;
+  padding-bottom: 2vh;
 }
 
-.contact h4 {
+.contact__heading {
   color: white;
-  padding: 2rem;
-  padding-left: 5rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 25vw;
+  padding: 2rem 0;
+}
+
+.contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50vw;
+}
+
+.contact__form * {
+  margin: 1rem 0;
+}
+
+.contact__name,
+.contact__message,
+.contact__email,
+.contact__btn {
+  padding: 1.2rem 0.6rem;
+}
+
+.contact__message {
+  resize: none;
+  height: 12rem;
+}
+
+.contact__footer {
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .contact__form {
+    width: 80vw;
+  }
+  .contact__heading {
+    margin: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .contact__footer {
+    width: 80vw;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=contact.css.map */

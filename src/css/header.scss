@@ -50,7 +50,7 @@
 .nav__heading {
   flex: 1;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   font-size: 1rem;
   color: white;
@@ -64,4 +64,58 @@
 .nav__heading--black-bg {
   background: hsl(250, 37%, 16%);
   transition: all 250ms ease-in;
+}
+
+.nav__list-item--btn {
+  background-color: #f6bd53;
+  padding: 0.8rem;
+  border-radius: 999px;
+  a {
+    color: black;
+  }
+}
+
+.nav__list-item--btn:hover {
+  border: 2px solid #f6bd53;
+  background-color: #ffe5b6;
+  a {
+    color: black;
+  }
+}
+
+.nav__btn {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .nav__list {
+    flex-direction: column;
+    height: 40vh;
+    width: 100vw;
+    padding: 0;
+    transform: translateX(100vw);
+    position: absolute;
+    display: none;
+    z-index: 1;
+    margin-top: 7vh;
+  }
+  .nav__list--open {
+    transform: translateX(0);
+    display: flex;
+  }
+  .nav__btn {
+    display: flex;
+    width: 20vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(1, 109, 130);
+    background: linear-gradient(180deg, rgba(1, 109, 130, 1) 0%);
+    z-index: 2;
+  }
+
+  .nav__heading {
+    padding-left: 2rem;
+    z-index: 2;
+  }
 }

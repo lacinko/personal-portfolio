@@ -1,5 +1,5 @@
 .skills {
-  margin-top: 16vh;
+  margin-top: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,4 +52,38 @@
   height: 60%;
   bottom: 0;
   left: 10rem;
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    margin-top: 0;
+    h4 {
+      background: rgb(1, 109, 130);
+      background: linear-gradient(180deg, rgba(1, 109, 130, 1) 0%);
+      width: 100vw;
+      padding-left: 2rem;
+      border-radius: 0;
+    }
+  }
+  .skills__background {
+    display: none;
+  }
+
+  .skillcard {
+    width: 35vw;
+    height: 25vh;
+    padding: 1rem 5rem;
+    margin: 1rem 0.5rem;
+    border-radius: 0;
+    img {
+      height: 60%;
+    }
+  }
+  .skillcard:nth-child(5),
+  .skillcard:nth-child(6),
+  .skillcard:nth-child(7) {
+    img {
+      height: 50%;
+    }
+  }
 }

@@ -80,6 +80,21 @@
   padding-right: 0.4rem;
 }
 
+.section__download-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.section__download-link:hover {
+  color: #000000;
+}
+
 .about-me__background {
   background: #016d82;
   background: -webkit-gradient(linear, left top, left bottom, from(#02cdd8), color-stop(50%, #01a9bc), to(#016d82));
@@ -98,5 +113,44 @@
   left: 20vw;
   top: 47vh;
   */
+}
+
+@media screen and (max-width: 480px) {
+  .about-me {
+    background: #1f1a38;
+  }
+  .about-me h4 {
+    width: 100vw;
+    padding-left: 2rem;
+  }
+  .about-me__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .about-me__container img {
+    height: 30vh;
+  }
+  .about-me__text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-me__text-container p {
+    padding: 2rem 1rem;
+    color: white;
+  }
 }
 /*# sourceMappingURL=aboutme.css.map */

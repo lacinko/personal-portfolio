@@ -131,4 +131,19 @@
     opacity: 0.2;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .section__container {
+    display: none;
+  }
+  .section__img-container {
+    width: 100vw;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section__heading {
+    padding: 1.5rem;
+  }
+}
 /*# sourceMappingURL=info.css.map */
